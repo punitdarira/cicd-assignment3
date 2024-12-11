@@ -35,6 +35,8 @@ pipeline {
                     echo 'Building the Python application...'
                     sh '''
                         #!/bin/bash -l
+                        python3 -m venv venv
+                        . venv/bin/activate
                         pip install -r requirements.txt
                     '''
                 }
